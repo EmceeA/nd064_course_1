@@ -30,6 +30,30 @@ def index():
     connection.close()
     return render_template('index.html', posts=posts)
 
+#Define health check
+@app.route('/healthz')
+def healthcheck():
+    response = app.response_class(
+            response=json.dumps({"result":"OK - healthy"}),
+            status=200,
+            mimetype='application/json'
+    )
+
+    app.logger.info('Status request successfull')
+    return response
+
+#Define Metrics
+@app.route('/metrics')
+def metrics():
+    response = app.response_class(
+            response=json.dumps({"status":"success","code":0,"data":{"db_connection_count": 1, "post_count": 7}}),
+            status=200,
+            mimetype='application/json'
+    )
+
+    app.logger.info('Metrics request successfull')
+    return response
+
 # Define how each individual article is rendered 
 # If the post ID is not found a 404 page is shown
 @app.route('/<int:post_id>')
@@ -67,4 +91,6 @@ def create():
 
 # start the application on port 3111
 if __name__ == "__main__":
+       ## stream logs to a file
+    logging.basicConfig(filename='app.log',level=logging.DEBUG)
    app.run(host='0.0.0.0', port='3111')
