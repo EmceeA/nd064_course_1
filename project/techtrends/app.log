@@ -1,0 +1,742 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:21:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:21:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 54, in metrics
+    post2 = json.dumps(posts1)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:21:51] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 54, in metrics
+    post2 = json.dumps(posts1)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:25:20] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:25:27] "[33mGET /status HTTP/1.1[0m" 404 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:45] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:47] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:47] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:48] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:59] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:31:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:32:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:32:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:32:07] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:32:25] "GET /4 HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:32:25] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:32:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:32:28] "GET /static/css/main.css HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:39:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:39:01] "GET /static/css/main.css HTTP/1.1" 200 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 54, in metrics
+    post2 = json.dumps(posts1)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:39:07] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:39:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:39:19] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:app:Status request successfull
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:39:35] "GET /healthz HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:50:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:50:08] "GET /static/css/main.css HTTP/1.1" 200 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    response=json.dumps({"status":"success","code":0,
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type function is not JSON serializable
+INFO:werkzeug:172.20.10.5 - - [29/Aug/2021 23:50:13] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    response=json.dumps({"status":"success","code":0,
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type function is not JSON serializable
+INFO:werkzeug:172.20.10.5 - - [30/Aug/2021 00:11:19] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+INFO:app:Status request successfull
+INFO:werkzeug:172.20.10.5 - - [30/Aug/2021 00:11:50] "GET /healthz HTTP/1.1" 200 -
+INFO:app:Status request successfull
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:03] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:08] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:11] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:11] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:17] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:19] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:19] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:12:21] "GET /static/css/main.css HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:24:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:24:37] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 78, in post
+    app.logger.info( 'Article' +''+ {post['title']} +' is retrieved')
+TypeError: can only concatenate str (not "set") to str
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:24:39] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 78, in post
+    app.logger.info( 'Article' +''+ {post['title']} +' is retrieved')
+TypeError: can only concatenate str (not "set") to str
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:24:48] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /3 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 78, in post
+    app.logger.info( 'Article' +''+ {post['title']} +' is retrieved')
+TypeError: can only concatenate str (not "set") to str
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:24:50] "[35m[1mGET /3 HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:25:32] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:25:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:25:36] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:25:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:28:02] "GET /6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:28:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:28:06] "GET /6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:28:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:A non-existing article is accessed
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:28:10] "[33mGET /7 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:28:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:A non-existing article is accessed
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:42:44] "[33mGET /7 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:42:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article {post} is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:42:48] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:42:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:Article 1 is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:44:27] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:44:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30 00:51:38.926316Article 1 is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:51:38] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:51:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 00:51:40.764611Article 1 is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:51:40] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:51:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+ERROR:app:Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: post() missing 1 required positional argument: 'post_name'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:56:38] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: post() missing 1 required positional argument: 'post_name'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:56:43] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: post() missing 1 required positional argument: 'post_name'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:56:48] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent) + 'Article {} is retrieved'.format(post.title,))
+AttributeError: 'sqlite3.Row' object has no attribute 'title'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:58:58] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent) + 'Article {} is retrieved'.format(post.title,))
+AttributeError: 'sqlite3.Row' object has no attribute 'title'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:59:02] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent) + 'Article {} is retrieved'.format(post.title,))
+AttributeError: 'sqlite3.Row' object has no attribute 'title'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:59:04] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent) + 'Article {} is retrieved'.format(post.title,))
+AttributeError: 'sqlite3.Row' object has no attribute 'title'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:59:08] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent) + 'Article {} is retrieved'.format(post.title,))
+AttributeError: 'sqlite3.Row' object has no attribute 'title'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:59:09] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent) + 'Article {} is retrieved'.format(post.title,))
+AttributeError: 'sqlite3.Row' object has no attribute 'title'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 00:59:10] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent)  + 'Article {} is retrieved'.format('SELECT title FROM posts WHERE id = ?',
+AttributeError: 'str' object has no attribute 'fetchone'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:03:24] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 80, in post
+    app.logger.info( str(recent)  + 'Article {} is retrieved'.format('SELECT title FROM posts WHERE id = ?',
+AttributeError: 'str' object has no attribute 'fetchone'
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:03:25] "[35m[1mGET /2 HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30 01:11:35.926839Article 2 is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:11:51] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:11:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 01:11:35.926839Article 1 is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:11:57] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:11:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 01:11:35.926839The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:12:52] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:12:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30 01:16:43The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:16:51] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:16:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:16:53] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:16:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 01:16:43The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:16:54] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:16:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30 01:18:06  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:14] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 01:18:06  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:15] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 01:18:06  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:17] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 01:18:06  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:17] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30 01:18:06  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:18] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:18:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30, 01:19:36,  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:19:52] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:19:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30, 01:19:36,  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:19:55] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:19:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:25:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:25:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30, 01:25:03,  Article <sqlite3.Row object at 0x000002323955CBD0> is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:25:11] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:25:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30, 01:28:44,  Article <sqlite3.Cursor object at 0x0000023CBDDA6F10> is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:28:51] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:28:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:29:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:29:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30, 01:28:44,  Article <sqlite3.Cursor object at 0x0000023CBDE191F0> is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:29:13] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:29:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30, 01:28:44,  Article <sqlite3.Cursor object at 0x0000023CBDE191F0> is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:29:17] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:29:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+ERROR:app:Exception on /3 [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 82, in post
+    title = connection.execute('SELECT name FROM posts WHERE id = ?',
+sqlite3.OperationalError: no such column: name
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:53:39] "[35m[1mGET /3 HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30, 01:58:29,  Article <sqlite3.Cursor object at 0x000001A7DE136F10> is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:58:37] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 01:58:37] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30, 02:02:19,  Article Kubernetes v1.20 Release Notes is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:32] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30, 02:02:19,  The "About Us" page is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:37] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:37] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2021-08-30, 02:02:19,  Article KubeCon + CloudNativeCon 2021 is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:44] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:02:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:06:17] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:06:17] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:app:2021-08-30, 02:02:19,A new article testpost is created
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:06:42] "[32mPOST /create HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:06:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:06:42] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:app:2021-08-30, 02:02:19,  Article testpost is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:06:55] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:06:55] "GET /static/css/main.css HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:09:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:09:36] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:app:2021-08-30, 02:09:24,  Article "2020 CNCF Annual Report" is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:09:38] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:09:38] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:17:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:17:14] "GET /static/css/main.css HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30, 02:26:41,  Article "KubeCon + CloudNativeCon 2021" is retrieved
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:27:27] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:27:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:27:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:27:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:27:45] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:27:47] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:30:56] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:31:00] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:31:01] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:31:01] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 02:31:01] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 56, in metrics
+    #post1 = get_post(post_id=any)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 20, in get_post
+    post = connection.execute('SELECT * FROM posts WHERE id = ?',
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 22:01:13] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 57, in metrics
+    print(post1)
+NameError: name 'post1' is not defined
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 22:01:38] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MichaelAkouwa\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project\techtrends\app.py", line 57, in metrics
+    # print(post1)
+NameError: name 'post1' is not defined
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 22:02:10] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:3111/ (Press CTRL+C to quit)
+INFO:app:2021-08-30, 22:02:30,  Metrics request successful
+INFO:werkzeug:127.0.0.1 - - [30/Aug/2021 22:02:37] "GET /metrics HTTP/1.1" 200 -
+INFO:app:2021-08-30, 22:02:30,  Metrics request successful
+INFO:werkzeug:127.0.0.1 - - [31/Aug/2021 10:57:37] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Aug/2021 10:57:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.5:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:app:2021-09-02, 14:43:49,  Metrics request successful
+INFO:werkzeug:127.0.0.1 - - [02/Sep/2021 14:45:44] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Sep/2021 14:45:44] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Sep/2021 14:45:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Sep/2021 14:45:51] "GET /static/css/main.css HTTP/1.1" 200 -

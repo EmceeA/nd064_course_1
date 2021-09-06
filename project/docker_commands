@@ -1,11 +1,37 @@
+
+##Dockerfile reference
+#TODO: C:\Users\MichaelAkouwa\Downloads\SUSE Nanodegree Projects\nd064_course_1\project
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+# TODO: docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+# TODO: docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
+docker logs -t great_lamarr
+docker logs -t -f --details 71f0f41b1bed
+
+
+
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+
+
+docker run -it python-techtrends sh
+docker run -d -p 3111:3111 python-techtrends
+
+
+2021-09-02T18:40:01.761220600Z  * Serving Flask app "app" (lazy loading)
+2021-09-02T18:40:01.761241800Z  * Environment: production
+2021-09-02T18:40:01.761245400Z    WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-02T18:40:01.761251700Z    Use a production WSGI server instead.
+2021-09-02T18:40:01.761254100Z  * Debug mode: off
+2021-09-06T13:11:20.111624700Z [(1, u'2021-09-02 17:47:41', u'2020 CNCF Annual Report', u'The Cloud Native Computing Foundation (CNCF) annual report for 2020 is now available. The report highlights the growth of the community, events, projects, and more, over the past year.'), (2, u'2021-09-02 17:47:41', u'KubeCon + CloudNativeCon 2021', u'The Cloud Native Computing Foundation flagship conference gathers leading technologists from leading open source and cloud native communities to further the education and advancement of cloud native computing.'), (3, u'2021-09-02 17:47:41', u'Kubernetes v1.20 Release Notes', u'Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications. The open source project is hosted by the Cloud Native Computing Foundation (CNCF).'), (4, u'2021-09-02 17:47:41', u'CNCF Cloud Native Interactive Landscape', u'This landscape is intended as a map through the previously uncharted terrain of cloud native technologies. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path.'), (5, u'2021-09-02 17:47:41', u'CNCF Cloud Native Definition v1.0', u'Cloud native technologies empower organizations to build and run scalable applications in modern, dynamic environments such as public, private, and hybrid clouds. Containers, service meshes, microservices, immutable infrastructure, and declarative APIs exemplify this approach. \nThese techniques enable loosely coupled systems that are resilient, manageable, and observable. Combined with robust automation, they allow engineers to make high-impact changes frequently and predictably with minimal toil.\nThe Cloud Native Computing Foundation seeks to drive adoption of this paradigm by fostering and sustaining an ecosystem of open source, vendor-neutral projects. We democratize state-of-the-art patterns to make these innovations accessible for everyone.'), (6, u'2021-09-02 17:47:41', u'Kubernetes Certification', u'CNCF, along with the Linux Foundation, have created certification programs for Kubernetes as well as training for CNCF projects Prometheus and Fluentd.')]
+
+
+
+docker login -u emceea
+
+66c5a534-5f94-48bf-8d53-cb09a535294a
