@@ -3,20 +3,33 @@ import logging
 import datetime
 
 from flask import Flask, jsonify, json, render_template, request, sessions, url_for, redirect, flash
+from flask.helpers import make_response
 from werkzeug.exceptions import abort
+
+#Count visit to database
+counter = 0
+def db_counter():
+    global counter
+    counter += 1
+    return counter
 
 #Define date
 recent = datetime.datetime.now().strftime("%Y-%m-%d, %H:%M:%S,")
+
+
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
+
 def get_db_connection():
     connection = sqlite3.connect('database.db')
     connection.row_factory = sqlite3.Row
     return connection
 
+
 # Function to get a post using its ID
 def get_post(post_id):
     connection = get_db_connection()
+    db_counter()
     post = connection.execute('SELECT * FROM posts WHERE id = ?',
                         (post_id,)).fetchone()
     connection.close()
@@ -26,14 +39,36 @@ def get_post(post_id):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
+
+
+
+  
+
+
 # Define the main route of the web application 
 @app.route('/')
 def index():
     connection = get_db_connection()
+    db_counter()
     posts = connection.execute('SELECT * FROM posts').fetchall()
-    print(posts)
+    # print(posts)
     connection.close()
     return render_template('index.html', posts=posts)
+
+
+
+
+
+#Count Posts
+def countPosts():
+    connection = sqlite3.connect('database.db')
+    connect = connection.cursor()
+    # posts = connection.execute('SELECT COUNT (*) FROM posts').fetchall()
+    posts = connection.execute('SELECT * FROM posts').fetchall()
+    db_counter()
+    connect.close()
+    # print(posts)
+    return posts
 
 
     #Define health check
@@ -51,17 +86,17 @@ def healthcheck():
 #Define Metrics
 @app.route('/metrics')
 def metrics():
-    connection1 = get_db_connection()
-    # posts1 = connection1.execute('SELECT * FROM posts')
-    # #post1 = get_post(post_id=any)
-    # print(post1)
+
+    postCount = len(countPosts())
+    # dbcount = counter
+    
 
 
-    response = app.response_class(
-            response=json.dumps({"status":"success","code":0,
-            "data":{"db_connection_count": 3 , "post_count": 4}}),
-            status=200,
-            mimetype='application/json'
+    response = make_response(
+            jsonify({
+                "db_connection_count": counter ,
+                "post_count": postCount}),
+            200,
     )
 
     app.logger.info(str(recent)  + '  Metrics request successful')
@@ -104,6 +139,7 @@ def create():
             flash('Title is required!')
         else:
             connection = get_db_connection()
+            db_counter()
             connection.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
                          (title, content))
             connection.commit()
@@ -120,6 +156,7 @@ if __name__ == "__main__":
         ## stream logs to a file
     logging.basicConfig(filename='app.log',level=logging.DEBUG)
     app.run(host='0.0.0.0', port='3111')
+    # app.debug = True
     ##app.run(debug=True,host='0.0.0.0')
 
 
