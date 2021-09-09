@@ -57,5 +57,5 @@ jobs:
           file: ./project/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}/emceea/techtrends:latest
           labels: ${{ steps.meta.outputs.labels }}
