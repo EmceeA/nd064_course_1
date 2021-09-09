@@ -1,6 +1,7 @@
 import sqlite3
 import logging
 import datetime
+from sqlite3.dbapi2 import OperationalError
 
 from flask import Flask, jsonify, json, render_template, request, sessions, url_for, redirect, flash
 from flask.helpers import make_response
@@ -74,14 +75,30 @@ def countPosts():
     #Define health check
 @app.route('/healthz')
 def healthcheck():
-    response = app.response_class(
+    try:
+        connection = get_db_connection()
+        db_counter()
+        connection.execute('SELECT * FROM posts').fetchall()
+        connection.close()
+    except sqlite3.OperationalError:
+        response = app.response_class(
+        response=json.dumps({"result":"ERROR - unhealthy"}),
+        status=500,
+        mimetype='application/json'
+    )
+    
+        app.logger.info(str(recent)  + '  health check successful')
+    
+        return response
+    else:
+        response = app.response_class(
             response=json.dumps({"result":"OK - healthy"}),
             status=200,
             mimetype='application/json'
     )
 
-    app.logger.info(str(recent)  + '  health check successful')
-    return response
+        app.logger.info(str(recent)  + '  health check not successful')
+        return response
 
 #Define Metrics
 @app.route('/metrics')
