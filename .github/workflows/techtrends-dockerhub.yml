@@ -33,9 +33,12 @@ jobs:
           # list of Docker images to use as base name for tags
           images: emceea/techtrends
           # generate Docker tags based on the following events/attributes
-          tag-custom: latest
-          tag-semver: |
-            {{raw}}
+          type=schedule
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=sha
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
