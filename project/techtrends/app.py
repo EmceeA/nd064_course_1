@@ -87,7 +87,7 @@ def healthcheck():
         mimetype='application/json'
     )
     
-        app.logger.info(str(recent)  + '  health check successful')
+        app.logger.info(str(recent)  + '  health check not successful')
     
         return response
     else:
@@ -97,7 +97,7 @@ def healthcheck():
             mimetype='application/json'
     )
 
-        app.logger.info(str(recent)  + '  health check not successful')
+        app.logger.info(str(recent)  + '  health check successful')
         return response
 
 #Define Metrics
