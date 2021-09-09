@@ -1,9 +1,9 @@
 apiVersion: v1
 name: techtrends
-description: 
+description:
 keywords:
 - techtrends
 version: 1.0.0
 maintainers:
-- name: michael 
+- name: michael
   email: akouwamichael@gmail.com
